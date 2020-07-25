@@ -250,7 +250,7 @@ h2 {
 
 .bg {
   animation: pulse 1.2s ease infinite;
-  background: #6c6c6c;
+  background: #404040;
 }
 
 .cta {
@@ -259,10 +259,14 @@ h2 {
   align-items: center;
   border: none;
   outline: none;
-  background: #6c6c6c;
+  background: #181818; 
   background-size: 18px;
   cursor: pointer;
 }
+
+/*
+#6c6c6c
+*/
 
 .cta a {
   color: #fff;
