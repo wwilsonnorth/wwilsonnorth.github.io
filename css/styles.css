@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Mulish", sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -70,7 +70,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 14px;
   letter-spacing: 1.2px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 }
 
@@ -213,7 +213,7 @@ nav ul li a {
 
 .background {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../img/mountains.jpg") no-repeat fixed center;
+    url("../img/sky.jpeg") no-repeat fixed center;
   background-size: cover;
   height: 100%;
   padding-top: 100px;
@@ -230,6 +230,11 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: 200;
+  display: block;
+}
+
+.title {
+  font-weight: 500;
 }
 
 .bg,
@@ -298,10 +303,6 @@ h2 {
 
 .inner-about-header {
   font-size: 2.125em;
-}
-
-h2 {
-  display: block;
 }
 
 p {
@@ -424,7 +425,7 @@ a.link-item:hover {
 @media screen and (max-width: 864px) {
   .title {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   h1 {
