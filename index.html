@@ -6,19 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will | Front-end Developer</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
-    <div class="background">
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="nav" class="hidden">
+            <label for="nav" class="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+            <div class="nav-wrapper">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="intro">
         <div class="content">
-            <h1 class="name">Will Wilson-North</h1>
-            <h2 class="title">Front End Developer</h2>
-            <div class="cta-container">
-                <div class="bg"></div>
-                <div class="cta"><a href="about.html"><i class="far fa-circle" aria-hidden="true"></i></a></div>
+            <h1>Will Wilson-North</h1>
+            <p id="role"></p>
+
+            <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+            <script>
+                new TypeIt("#role", {
+                    strings: "Front End Developer",
+                    speed: 60,
+                    waitUntilVisible: true
+                }).go();
+            </script>
+
+            <div class="social">
+                <a class="social-link" href="https://github.com/wwilsonnorth" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                <a class="social-link" href="https://www.linkedin.com/in/wwilsonnorth/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a class="social-link" href="mailto:wwilsonnorth@gmail.com" target="_blank"><i
+                        class="fas fa-envelope"></i></a>
             </div>
         </div>
     </div>

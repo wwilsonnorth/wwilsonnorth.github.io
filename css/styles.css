@@ -25,6 +25,10 @@ a:focus {
   color: #000000;
 }
 
+a:hover {
+  color: #444444;
+}
+
 nav {
   padding: 8px;
 }
@@ -66,7 +70,7 @@ nav ul li a {
   display: inline-block;
   outline: none;
   color: #000;
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-decoration: none;
   font-size: 14px;
   letter-spacing: 1.2px;
@@ -211,12 +215,27 @@ nav ul li a {
   text-align: center;
 }
 
-.background {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../img/sky.jpeg") no-repeat fixed center;
-  background-size: cover;
-  height: 100%;
-  padding-top: 100px;
+.intro {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#role {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.social {
+  letter-spacing: 10px;
+  font-size: 22px;
+}
+
+.social a:hover {
+  color: #444444;
 }
 
 h1 {
@@ -227,82 +246,19 @@ h1 {
   display: block;
 }
 
-h2 {
-  font-size: 18px;
+.inner-header {
+  font-size: 1.875em;
   font-weight: 200;
   display: block;
 }
 
-.title {
-  font-weight: 500;
-}
-
-.bg,
-.cta {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-}
-
-.cta-container {
-  display: flex;
-  width: 100%;
-  margin-top: 75px;
-  justify-content: center;
-  align-items: center;
-}
-
-.bg {
-  animation: pulse 1.2s ease infinite;
-  background: #404040;
-}
-
-.cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  outline: none;
-  background: #181818; 
-  background-size: 18px;
-  cursor: pointer;
-}
-
-/*
-#6c6c6c
-*/
-
-.cta a {
-  color: #fff;
-  font-size: 20px;
-  padding: 15px;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-
-.about-container {
+.section-container {
   margin: 150px 100px 0 150px;
 }
 
-.inner-about-container {
+.inner-section-container {
   line-height: 1.6;
   margin-bottom: 50px;
-}
-
-.inner-about-header {
-  font-size: 2.125em;
 }
 
 p {
@@ -331,19 +287,6 @@ p {
   display: inline-block;
   vertical-align: top;
   margin-top: 15px;
-}
-
-.work-container {
-  margin: 150px 100px 0 150px;
-}
-
-.inner-work-container {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.inner-work-header {
-  font-size: 2.125em;
 }
 
 .flex-container {
@@ -391,21 +334,17 @@ a.link-item:hover {
   transition: all 0.2s ease-in-out;
 }
 
-.contact-container {
-  margin: 150px 100px 0 150px;
-}
-
-.inner-contact-container {
-  line-height: 1.6;
-  margin-bottom: 50px;
-}
-
-.inner-contact-header {
-  font-size: 2.125em;
-}
-
-.contact-description a {
+.contact-description a,
+.inner-work-description a {
   font-weight: bold;
+}
+
+.contact-description a:hover,
+.inner-work-description a:hover {
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+  transition: 0.2s ease-in-out;
+  color: #000;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -423,24 +362,11 @@ a.link-item:hover {
 }
 
 @media screen and (max-width: 864px) {
-  .title {
-    font-size: 15px;
-    font-weight: 500;
-  }
-
   h1 {
     font-size: 35px;
   }
 
-  .about-container {
-    margin: 50px 25px 0 50px;
-  }
-
-  .work-container {
-    margin: 50px 25px 0 50px;
-  }
-
-  .contact-container {
+  .section-container {
     margin: 50px 25px 0 50px;
   }
 }
@@ -460,15 +386,7 @@ a.link-item:hover {
     font-size: 20px;
   }
 
-  .about-container {
-    margin: 15px 15px 0 15px;
-  }
-
-  .work-container {
-    margin: 15px 15px 0 15px;
-  }
-
-  .contact-container {
+  .section-container {
     margin: 15px 15px 0 15px;
   }
 
