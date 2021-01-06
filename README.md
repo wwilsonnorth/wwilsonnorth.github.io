@@ -1,4 +1,5 @@
-# Portfolio
-This is my first multi page website as a personal portfolio I have created by myself in order to introduce myself, my skillset and display my work as a developer. I used HTML and CSS throughout making the website look clean and minimalistic.
+### Personal Portfolio - https://wwilsonnorth.github.io/
 
-Please use this link to view the site - https://wwilsonnorth.github.io/
+Built by Will Wilson-North using: HTML, CSS & a tiny bit of JS to provide a clean, minimalistic look
+
+![Image of portfolio Landing Page](https://github.com/wwilsonnorth/wwilsonnorth.github.io/blob/master/img/portfolio.png)
