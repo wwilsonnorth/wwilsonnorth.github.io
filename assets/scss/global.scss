@@ -137,11 +137,6 @@ li {
   padding: 0;
 }
 
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
 .curtain {
   background-image: linear-gradient(to bottom, $Black 50%, $White 50%);
 
@@ -217,6 +212,8 @@ main {
   }
 
   #about {
+    max-width: 2000px;
+    margin: 0 auto;
     .row {
       display: flex;
       align-items: center;
@@ -296,6 +293,8 @@ main {
   }
 
   #portfolio {
+    max-width: 2000px;
+    margin: 0 auto;
     .project {
       margin: 4rem 0;
 
