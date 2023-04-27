@@ -1,0 +1,230 @@
+@charset "UTF-8";
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: center; }
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 2rem; } }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem; } }
+  @media (max-width: 320px) {
+    h1 {
+      font-size: 1.6rem; } }
+
+h2 {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 2.5rem;
+  padding-bottom: 1rem; }
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 2rem; } }
+
+p,
+li {
+  font-family: "Public Sans", sans-serif;
+  color: #33323d;
+  font-size: 1rem;
+  line-height: 30px; }
+  @media (max-width: 1500px) {
+    p,
+    li {
+      font-size: .9rem; } }
+  @media (max-width: 700px) {
+    p,
+    li {
+      font-size: 0.9rem; } }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto; }
+
+.curtain {
+  background-image: linear-gradient(to bottom, #000000 50%, #ffffff 50%); }
+  .curtain::after {
+    content: "";
+    display: block;
+    min-height: 100vh; }
+  .curtain .invert {
+    position: sticky;
+    top: 20px;
+    mix-blend-mode: difference;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; }
+    .curtain .invert .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%; }
+      .curtain .invert .content h1,
+      .curtain .invert .content p {
+        color: #ffffff; }
+      .curtain .invert .content svg {
+        fill: #ffffff; }
+      .curtain .invert .content .slogan {
+        font-family: "Public Sans", sans-serif;
+        color: #ffffff;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 0.8rem; }
+        @media (max-width: 700px) {
+          .curtain .invert .content .slogan {
+            letter-spacing: 5px;
+            font-size: 0.7rem; } }
+      .curtain .invert .content .cta {
+        margin-top: 5rem; }
+        .curtain .invert .content .cta svg {
+          fill: #ffffff;
+          width: 40px;
+          transition: .2s ease-in-out; }
+          .curtain .invert .content .cta svg:hover {
+            opacity: 50%; }
+
+main {
+  padding: 0 5rem 5rem 5rem; }
+  @media (max-width: 1200px) {
+    main {
+      padding: 0 2rem 2rem 2rem; } }
+  main #about .row {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    main #about .row .col {
+      flex: 1 0 50%; }
+    main #about .row .image img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #dddddd; }
+    main #about .row .text ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      gap: 0px 10px;
+      padding: 0px;
+      margin: 20px 0px 0px;
+      overflow: hidden;
+      list-style: none; }
+    main #about .row .text li {
+      position: relative;
+      padding-left: 20px; }
+      main #about .row .text li::before {
+        content: "▹";
+        position: absolute;
+        left: 0px;
+        top: 8px;
+        color: #000000;
+        font-size: 1rem;
+        line-height: 12px; }
+  @media (max-width: 1200px) {
+    main #about .row {
+      display: block; }
+      main #about .row .col:first-of-type {
+        text-align: center;
+        margin-bottom: 2rem; }
+      main #about .row .col:last-of-type p {
+        width: 95%; } }
+  main .divider {
+    margin: 6rem auto;
+    background-color: #dddddd;
+    height: 1px;
+    width: 50%; }
+    @media (max-width: 700px) {
+      main .divider {
+        width: 80%; } }
+  main #portfolio .project {
+    margin: 4rem 0; }
+    main #portfolio .project .row {
+      display: flex; }
+      main #portfolio .project .row.left {
+        -webkit-flex-direction: row;
+        flex-direction: row; }
+        main #portfolio .project .row.left .col:last-of-type {
+          margin-right: 0; }
+      main #portfolio .project .row.right {
+        -webkit-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+        main #portfolio .project .row.right .col:first-of-type {
+          margin-left: 0; }
+      main #portfolio .project .row .col {
+        flex: 1 0 50%; }
+        main #portfolio .project .row .col:nth-child(1) img {
+          width: 100%;
+          object-fit: contain; }
+        main #portfolio .project .row .col:nth-child(2) {
+          margin: 0 5rem;
+          max-width: 500px;
+          align-self: center; }
+          main #portfolio .project .row .col:nth-child(2) .text .languages {
+            font-family: "Public Sans", sans-serif;
+            color: #5fb4a2;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin: 1rem 0; }
+          main #portfolio .project .row .col:nth-child(2) .text .buttons svg {
+            width: 20px;
+            height: 20px;
+            transition: 0.2s ease-in-out;
+            margin-right: 1rem; }
+            main #portfolio .project .row .col:nth-child(2) .text .buttons svg:hover {
+              fill: #5fb4a2; }
+  @media (max-width: 1200px) {
+    main #portfolio .project .row {
+      display: block; }
+      main #portfolio .project .row .col:nth-child(2) {
+        margin: 2rem 0;
+        max-width: 100%; } }
+  @media (max-width: 700px) {
+    main {
+      padding: 2rem; } }
+
+footer {
+  background-color: #34323d;
+  padding: 4rem;
+  text-align: center;
+  font-family: "Public Sans", sans-serif; }
+  footer a:link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out; }
+  footer a:visited {
+    color: #ffffff;
+    text-decoration: none; }
+  footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 50%; }
+  footer a:active {
+    color: #ffffff;
+    text-decoration: none; }
+  footer .links {
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column; }
+    footer .links a {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      font-size: 0.75rem; }
+  footer .social {
+    margin: 2rem 0; }
+    footer .social svg {
+      fill: #ffffff;
+      width: 25px;
+      height: 25px;
+      margin: 0 0.5rem; }
