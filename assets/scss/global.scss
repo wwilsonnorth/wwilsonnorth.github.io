@@ -295,6 +295,9 @@ main {
   #portfolio {
     max-width: 2000px;
     margin: 0 auto;
+
+    @include linkStyle($Black, none, $Cyan, none);
+
     .project {
       margin: 4rem 0;
 

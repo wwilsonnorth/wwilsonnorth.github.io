@@ -149,6 +149,20 @@ main {
   main #portfolio {
     max-width: 2000px;
     margin: 0 auto; }
+    main #portfolio a:link {
+      color: #000000;
+      text-decoration: none;
+      transition: 0.2s ease-in-out; }
+    main #portfolio a:visited {
+      color: #000000;
+      text-decoration: none; }
+    main #portfolio a:hover {
+      color: #5fb4a2;
+      text-decoration: none;
+      opacity: 50%; }
+    main #portfolio a:active {
+      color: #5fb4a2;
+      text-decoration: none; }
     main #portfolio .project {
       margin: 4rem 0; }
       main #portfolio .project .row {
