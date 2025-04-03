@@ -1,0 +1,382 @@
+$Black: #000000;
+$Dark: #111b21;
+$LGrey: #dddddd;
+$Grey: #33323d;
+$White: #ffffff;
+
+@mixin Public {
+  font-family: "Public Sans", sans-serif;
+}
+
+@mixin Ibarra {
+  font-family: "Ibarra Real Nova", serif;
+}
+
+@mixin Poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+@mixin linkStyle($c1, $d1, $c2, $d2) {
+  a:link {
+    color: $c1;
+    text-decoration: $d1;
+    transition: 0.2s ease-in-out;
+  }
+
+  a:visited {
+    color: $c1;
+    text-decoration: $d1;
+  }
+
+  a:hover {
+    color: $c2;
+    text-decoration: $d2;
+    opacity: 50%;
+  }
+
+  a:active {
+    color: $c2;
+    text-decoration: $d2;
+  }
+}
+
+@mixin breakpoint-largedesktop {
+  @media (min-width: 2000px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mediumdesktop {
+  @media (max-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-smalldesktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-mobileLandscape {
+  @media (max-height: 560px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin breakpoint-smallmobile {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: $White;
+  @include Poppins;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 5vw, 4.5rem);
+  line-height: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+h2 {
+  @include Ibarra;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: clamp(3rem, 4vw, 3.5rem);
+}
+
+p,
+li {
+  @include Public;
+  color: $Grey;
+  font-size: clamp(0.9rem, 1vw, 1.4rem);
+  line-height: clamp(1.8rem, 2vw, 2rem);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-tablet {
+    display: block;
+  }
+}
+
+.btn {
+  @include Public;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s;
+  border-radius: 10px;
+  padding: .5rem;
+  color: $Dark;
+  border: 2px solid $Dark;
+
+  &:hover {
+    color: $White;
+
+    &::before {
+      bottom: -50px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 200px;
+    width: 250px;
+    border-radius: 50%;
+    bottom: 100%;
+    left: -30px;
+    transition: 0.7s;
+    background: $Dark;
+  }
+}
+
+//
+
+.curtain {
+  background-image: linear-gradient(to bottom, $Black 50%, $White 50%);
+
+  &::after {
+    content: "";
+    display: block;
+    min-height: 100vh;
+  }
+
+  .invert {
+    top: 20px;
+    display: flex;
+    position: sticky;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      .slogan {
+        width: 100%;
+        color: $White;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+        letter-spacing: clamp(0.3rem, 0.6vw, 0.4rem);
+      }
+
+      .cta {
+        margin-top: 5rem;
+
+        svg {
+          width: 40px;
+          transition: .2s ease-in-out;
+
+          &:hover {
+            opacity: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin: 5rem;
+
+  @include breakpoint-tablet {
+    margin: 5rem 2rem;
+  }
+
+  .divider {
+    width: 50%;
+    height: 1px;
+    margin: 5rem auto;
+    background-color: $LGrey;
+
+    @include breakpoint-mobile {
+      width: 80%;
+    }
+  }
+
+  #about {
+    .row .col {
+      flex: 1 0 50%;
+
+      &.image img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid $LGrey;
+      }
+
+      &.text p {
+        width: 90%;
+      }
+    }
+
+    @include breakpoint-tablet {
+      .row .col {
+        &.image {
+          text-align: center;
+          margin-bottom: 2rem;
+
+          img {
+            width: 70%;
+          }
+        }
+
+        &.text p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+
+  #portfolio {
+
+    .project {
+      margin-bottom: 8rem;
+
+      &:first-of-type {
+        margin-top: 4rem;
+      }
+
+      .row {
+
+        &.left {
+          flex-direction: row;
+          -webkit-flex-direction: row;
+
+          .col:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+        &.right {
+          flex-direction: row-reverse;
+          -webkit-flex-direction: row-reverse;
+
+          .col:first-of-type {
+            margin-left: 0;
+          }
+        }
+
+        .col {
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 0 #00000050;
+          }
+
+          &:nth-child(1) {
+            flex: 1 0 65%;
+          }
+
+          &:nth-child(2) {
+            flex: 1 0 35%;
+            margin: 0 5rem;
+
+            .text {
+
+              .languages {
+                @include Public;
+                color: $Dark;
+                font-weight: bold;
+                font-size: 0.8rem;
+                margin: 1rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint-tablet {
+      .project .row .col {
+
+        &:nth-child(2) {
+          margin: 2rem 0;
+          max-width: 100%;
+
+        }
+      }
+    }
+  }
+}
+
+footer {
+  @include Public;
+  padding: 4rem;
+  text-align: center;
+  background-color: $Dark;
+
+  @include linkStyle($White, none, $White, none);
+
+
+  .links a {
+    width: fit-content;
+    margin: .5rem .5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+  }
+
+  .social {
+    margin: 2rem 0;
+
+    svg {
+      fill: $White;
+      width: 20px;
+      height: 20px;
+      margin: .5rem;
+    }
+  }
+}
