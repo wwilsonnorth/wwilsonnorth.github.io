@@ -131,7 +131,7 @@ main {
 }
 @media (max-width: 1000px) {
   main {
-    margin: 5rem 2rem;
+    margin: 5rem 1.5rem;
   }
 }
 main .divider {
@@ -195,7 +195,7 @@ main #portfolio .project .row .col img {
   height: 100%;
   object-fit: contain;
   border-radius: 15px;
-  box-shadow: 0 0 15px 0 #00000050;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3137254902);
 }
 main #portfolio .project .row .col:nth-child(1) {
   flex: 1 0 65%;
@@ -259,3 +259,5 @@ footer .social svg {
   height: 20px;
   margin: 0.5rem;
 }
+
+/*# sourceMappingURL=global.css.map */

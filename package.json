@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass assets/scss/global.scss assets/css/style.css -w",
-    "compile:sass": "node-sass assets/scss/global.scss assets/css/style.css"
+    "watch:sass": "sass assets/scss:assets/css --watch",
+    "serve": "live-server --watch=assets",
+    "dev": "concurrently \"npm run watch:sass\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/wwilsonnorth/wwilsonnorth.github.io#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "concurrently": "^9.1.2",
+    "sass": "^1.89.2"
   },
   "dependencies": {
     "live-server": "^1.2.2"
